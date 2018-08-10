@@ -89,6 +89,7 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
   const image = document.getElementById('restaurant-img');
   image.className = 'restaurant-img'
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
+  image.alt = DBHelper.imageAltTagForRestaurant(restaurant);
 
   const cuisine = document.getElementById('restaurant-cuisine');
   cuisine.innerHTML = restaurant.cuisine_type;
@@ -127,6 +128,7 @@ fillRestaurantHoursHTML = (operatingHours = self.restaurant.operating_hours) => 
 fillReviewsHTML = (reviews = self.restaurant.reviews) => {
   const container = document.getElementById('reviews-container');
   const title = document.createElement('h2');
+  title.setAttribute('tabindex', 0);
   title.innerHTML = 'Reviews';
   container.appendChild(title);
 
@@ -148,21 +150,34 @@ fillReviewsHTML = (reviews = self.restaurant.reviews) => {
  */
 createReviewHTML = (review) => {
   const li = document.createElement('li');
+  li.setAttribute('tabindex', 0);
+  const ratingHeading = document.createElement('div');
+  ratingHeading.setAttribute("class", "rating-heading");
   const name = document.createElement('p');
+  name.setAttribute("class", "reviewer" );
   name.innerHTML = review.name;
-  li.appendChild(name);
+  //li.appendChild(name);
+  ratingHeading.appendChild(name);
 
   const date = document.createElement('p');
+  date.setAttribute("class", "review-date" );
   date.innerHTML = review.date;
-  li.appendChild(date);
+  //li.appendChild(date);
+  ratingHeading.appendChild(date);
 
   const rating = document.createElement('p');
+  rating.setAttribute("class", "rating" );
   rating.innerHTML = `Rating: ${review.rating}`;
-  li.appendChild(rating);
+  //li.appendChild(rating);
+  ratingHeading.appendChild(rating);
+
+  li.appendChild(ratingHeading);
 
   const comments = document.createElement('p');
+  comments.setAttribute("class", "comments");
   comments.innerHTML = review.comments;
   li.appendChild(comments);
+
 
   return li;
 }
@@ -191,4 +206,13 @@ getParameterByName = (name, url) => {
   if (!results[2])
     return '';
   return decodeURIComponent(results[2].replace(/\+/g, ' '));
+}
+
+//Register ServiceWorker
+if('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js').then(() => { 
+    console.log("Service Worker Registered."); 
+  }).catch(() => {
+    console.log("Service Worker Registration failed");
+  });
 }
