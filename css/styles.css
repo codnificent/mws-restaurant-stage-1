@@ -35,9 +35,9 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
   min-height: 100%;
 }
 #footer {
-  background-color:  #3397DB;
+  background-color:   #b5abab;
   margin-top: -50px;
-  color: #fff;
+  color: #1b1b3d;
   font-size: 14px;
   letter-spacing: 1px;
   padding: 25px;
@@ -46,13 +46,13 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
   max-width: 100%;
 }
 #footer a{
-  color: #fff;
+  color: #19150d;
   text-decoration: underline;
 }
 /* ====================== Navigation ====================== */
 nav {
   max-width: 100%;
-  background-color: #3397DB;
+  background-color: #b5abab;
   text-align:center;
   padding: 30px;
 }
@@ -60,7 +60,7 @@ nav h1 {
   margin: auto;
 }
 nav h1 a {
-  color: #fff;
+  color: #1b1b3d;
   font-weight: 700;
   font-size: 16px;
   text-transform: uppercase;
@@ -90,7 +90,7 @@ nav h1 a {
 
 /* Add a color to all links inside the list */
 #breadcrumb li a {
-    color: #0275d8;
+    color: #053763;
     text-decoration: none;
 }
 
@@ -110,12 +110,17 @@ nav h1 a {
   text-align: center;
   width: 100%;
   height: auto;
-  background-color: #3397DB;
+  background-color: #b5abab;
   padding-bottom: 14px;
+}
+.filter-options label {
+  color: #1b1b3d;
+  font-size: 14px;
+  font-weight: 200;
 }
 .filter-options h2 {
   padding-top: 14px;
-  color: white;
+  color: #1b1b3d;
   font-size: 1.2rem;
   font-weight: normal;
   line-height: 1em;
@@ -160,7 +165,7 @@ nav h1 a {
   min-width: 100%;
 }
 #restaurants-list li h1 {
-  color: #f18200;
+  color: blue;
   font-family: Arial,sans-serif;
   font-size: 14pt;
   font-weight: 200;
@@ -174,7 +179,7 @@ nav h1 a {
   font-size: 16px;
 }
 #restaurants-list li a {
-  background-color: #f58500;
+  background-color: blue;
   color: #fff;
   display: inline-block;
   font-size: 16px;
@@ -217,7 +222,7 @@ nav h1 a {
   max-width: 100%;
 }
 #restaurant-name {
-  color: #f18200;
+  color: #035c0c;
   font-family: Arial,sans-serif;
   text-align: center;
   font-size: 18px;
@@ -258,7 +263,7 @@ nav h1 a {
 
 }
 #reviews-container h2 {
-  color: #f58500;
+  color: #035c0c;
   font-size: 20px;
   font-weight: 700;
   letter-spacing: 1px;
@@ -295,14 +300,14 @@ nav h1 a {
   font-size: 16px;
 }
 .reviewer{
-  color: #3397DB;
+  color: blue;
   text-transform: uppercase;
   letter-spacing: 3px;
   font-size: 16px;
   font-weight: 700; 
 }
 .rating{
-  background:  #f58500;
+  background:  blue;
   color: #fff;
   font-size: 18px;
   letter-spacing: 3px;
