@@ -64,6 +64,7 @@ fillCuisinesHTML = (cuisines = self.cuisines) => {
     const option = document.createElement('option');
     option.innerHTML = cuisine;
     option.value = cuisine;
+    option.setAttribute('aria-labelledby', cuisine);
     select.append(option);
   });
 }
@@ -159,6 +160,9 @@ createRestaurantHTML = (restaurant) => {
   const li = document.createElement('li');
   //Add tabindex of 0 to the restaurant lists
   li.setAttribute('tabindex', 0);
+  /*These images are minified using gulp. Though it's only 3.8% 
+  minification. This shows that the images are optimized already
+  */
   const image = document.createElement('img');
   image.className = 'restaurant-img';
 
@@ -214,7 +218,7 @@ addMarkersToMap = (restaurants = self.restaurants) => {
 } */
 
 
-
+/*
 //Register ServiceWorker
 if('serviceWorker' in navigator) {
   navigator.serviceWorker.register('/sw.js').then(() => { 
@@ -223,5 +227,6 @@ if('serviceWorker' in navigator) {
     console.log("Service Worker Registration failed");
   });
 }
+*/
 
 
