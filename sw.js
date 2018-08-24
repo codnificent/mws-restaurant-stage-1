@@ -1,8 +1,8 @@
 const CACHE_NAME = 'cache_v1';
 let urlsToCache = [
-  '/',
-  '/css/styles.css',
-  '/restaurant.html'
+  '',
+  'css/styles.css',
+  'restaurant.html'
 ];
 
 self.addEventListener('install', (event) => {
